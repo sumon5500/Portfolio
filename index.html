@@ -1223,7 +1223,13 @@
 	
 <!-- footer year scritp start	 -->
 <script>
-	document.querySelector('#footerYear').innerHTML = (new Date().getFullYear());
+	
+	setInterval( ()=>{
+		let time = new Date();
+                let fullDate = time.toLocaleDateString();
+		let fullYear = time.getFullYear();
+		document.querySelector('#footerYear').innerHTML = fullDate + ' ' + fullYear ;
+	})
 </script>
 <!-- footer year scritp start	 -->
 
