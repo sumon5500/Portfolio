@@ -1228,7 +1228,18 @@
 		let time = new Date();
                 let fullDate = time.toLocaleDateString();
 		let second = time.getSeconds();
-		document.querySelector('#footerYear').innerHTML = second + " " +fullDate;
+		let minute = time.getMinutes();
+		let hours = time.getHours();
+		if(second < 10){
+			second = "0" + second;
+		}
+		if(minute < 10){
+			minute = "0" + minute;
+		}
+		if(hours < 10){
+			hours = "0" + hours;
+		}
+		document.querySelector('#footerYear').innerHTML = second + ":" + minute + ":" + hours + " " +fullDate;
 	})
 </script>
 <!-- footer year scritp start	 -->
